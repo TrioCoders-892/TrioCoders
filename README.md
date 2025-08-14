@@ -1,4 +1,4 @@
-##Excercise-01
+#Excercise-01
 # JavaScript Basics – HTML Exercises
 
 This repository contains a set of beginner-friendly HTML and JavaScript exercises demonstrating fundamental concepts such as linking JavaScript, DOM selection, event handling, and function types.
