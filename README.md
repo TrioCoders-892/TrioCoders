@@ -41,4 +41,5 @@ Displays results on the web page.
 ## 🚀 How to Run
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/js-basics-exercises.git
+   git clone https://github.com/TrioCoders-892/TrioCoders.git
+
