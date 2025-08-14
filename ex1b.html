@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element Selection Example</title>
+</head>
+
+<body>
+    <h1 id="pageTitle">Welcome to the Page</h1>
+    <div class="content">
+        <p class="intro">This is an introductory paragraph.</p>
+        <p>Another paragraph.</p>
+    </div>
+    <ul id="myList">
+        <li>Item 1</li>
+        <li class="special">Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <script>
+        // Select by ID
+        const title = document.getElementById('pageTitle');
+        console.log('Title element:', title.textContent);
+
+        // Select by Class Name
+        const intros = document.getElementsByClassName('intro');
+        if (intros.length > 0) {
+            console.log('Intro paragraph:', intros[0].textContent);
+        }
+
+        // Select by Tag Name
+        const allParagraphs = document.getElementsByTagName('p');
+        console.log('Number of paragraphs:', allParagraphs.length);
+
+        // Select using querySelector
+        const firstSpecialItem = document.querySelector('.special');
+        console.log('First special item:', firstSpecialItem.textContent);
+
+        // Select using querySelectorAll
+        const allListItems = document.querySelectorAll('#myList li');
+        console.log('All list items:');
+        allListItems.forEach(item => console.log('- ' + item.textContent));
+    </script>
+</body>
+
+</html>

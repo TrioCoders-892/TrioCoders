@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listeners Example</title>
+    <style>
+        #myButton {
+            padding: 10px 20px;
+            background-color: lightblue;
+            border: 1px solid blue;
+            cursor: pointer;
+        }
+
+        #output {
+            margin-top: 20px;
+            border: 1px solid gray;
+            padding: 10px;
+            min-height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="myButton">Click Me</button>
+    <div id="output"></div>
+
+    <script>
+        const myButton = document.getElementById('myButton');
+        const outputDiv = document.getElementById('output');
+
+        // Mouse Event Listener
+        myButton.addEventListener('click', () => {
+            outputDiv.textContent = 'Button Clicked!';
+        });
+
+        myButton.addEventListener('mouseover', () => {
+            outputDiv.textContent = 'Mouse over button.';
+        });
+
+        myButton.addEventListener('mouseout', () => {
+            outputDiv.textContent = 'Mouse left button.';
+        });
+
+        // Key Event Listener (on the whole document)
+        document.addEventListener('keydown', (event) => {
+            outputDiv.textContent = `Key Down: ${event.key}`;
+        });
+
+        document.addEventListener('keyup', (event) => {
+            outputDiv.textContent = `Key Up: ${event.key}`;
+        });
+    </script>
+</body>
+
+</html>

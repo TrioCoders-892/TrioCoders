@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Function Types</title>
+</head>
+
+<body>
+    <h1>Demonstrating JavaScript Function Types</h1>
+
+    <p id="output"></p>
+
+    <script>
+        // 1. Function Declaration
+        // This function is hoisted, meaning it can be called before its declaration in the code.
+        function greetDeclaration(name) {
+            return `Hello from Function Declaration, ${name}!`;
+        }
+
+        // 2. Function Expression (Function Definition)
+        // This function is assigned to a variable and is not hoisted in the same way as a declaration.
+        const greetExpression = function (name) {
+            return `Hello from Function Expression, ${name}!`;
+        };
+
+        // 3. Arrow Function
+        // A concise syntax for writing function expressions.
+        const greetArrow = (name) => {
+            return `Hello from Arrow Function, ${name}!`;
+        };
+
+        // Calling the functions and displaying results
+        const outputElement = document.getElementById('output');
+        outputElement.innerHTML += greetDeclaration('Alice') + '<br>';
+        outputElement.innerHTML += greetExpression('Bob') + '<br>';
+        outputElement.innerHTML += greetArrow('Charlie') + '<br>';
+
+        // Example of an implicit return in an arrow function (single expression)
+        const add = (a, b) => a + b;
+        outputElement.innerHTML += `Sum using Arrow Function (implicit return): ${add(5, 3)}<br>`;
+    </script>
+</body>
+
+</html>
