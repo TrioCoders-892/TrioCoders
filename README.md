@@ -1,1 +1,1 @@
-# TrioCoders
+# Exercise-1
